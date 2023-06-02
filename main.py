@@ -24,5 +24,5 @@ def update_2(sno):
          
     return render_template("update.html",company=temp)
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True,host="0.0.0.0")
 
