@@ -39,7 +39,8 @@
                         <td>{{ company.business_name}}</td>
                         <td>{{ company.contact}}</td>
                         <td>{{ company.add}}</td>
-                        <td><a href="/update/{{ company.sno}}">update</a></td>
+                        <td><a href="/update/{{ company.sno}}">update</a>
+                            <a href="/delete/{{ company.sno}}">delete</a></td>
                     </tr>
                     {% endfor %}
                   </table>

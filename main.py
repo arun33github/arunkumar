@@ -26,9 +26,8 @@ def update_2(sno):
 
 @app.route("/delete/<int:sno>",methods=["POST","GET"])
 def delete_2(sno):
-    if request.method=="post":
-        delete.delete(request.form["cname"],request.form["phoneno"],request.form["location"])
-
+        delete.delete(sno)
+        return redirect("/")
 
 if __name__=="__main__":
     app.run(debug=True,host="0.0.0.0")
