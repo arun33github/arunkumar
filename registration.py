@@ -1,6 +1,6 @@
-import json_utlis
+import json_utils
 def register_business(cname,contact,address):
-    data=json_utlis.Business("data/business.json")
+    data=json_utils.Business("data/business.json")
     business_json={
         "sno":len(data["Business"])+1,
         "business_name":cname,
@@ -9,7 +9,7 @@ def register_business(cname,contact,address):
     }
 
     data["Business"].append(business_json) 
-    json_utlis.write_json("data/business.json",data)
+    json_utils.write_json("data/business.json",data)
 
 
     

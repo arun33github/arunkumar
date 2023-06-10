@@ -1,5 +1,5 @@
 from flask import Flask,render_template,request,redirect
-import json_utlis
+import json_utils
 import registration
 import update
 import delete
@@ -10,7 +10,7 @@ app=Flask(__name__)
 def register():
     if request.method=="POST":
      registration.register_business(request.form["cname"],request.form["phoneno"],request.form["location"])
-    data=json_utlis.Business("data/business.json")
+    data=json_utils.Business("data/business.json")
     return render_template("home.html",business=data["Business"])
 
 @app.route("/update/<int:sno>",methods=["POST","GET"])
@@ -18,7 +18,7 @@ def update_2(sno):
     if request.method=="POST":
         update.update(request.form ["sno"],request.form["cname"],request.form["phoneno"],request.form["location"])
         return redirect("/")
-    data=json_utlis.Business("data/business.json")
+    data=json_utils.Business("data/business.json")
     for company in data["Business"]:
         if sno==company["sno"]:
          temp=company  
