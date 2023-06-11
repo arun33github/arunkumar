@@ -1,22 +1,10 @@
 {
    "Business": [
       {
-         "sno": 2,
-         "business_name": "resorts",
-         "contact": "556565456",
-         "add": "tuty"
-      },
-      {
          "sno": 3,
          "business_name": "cafe",
          "contact": "556565456",
          "add": "tuty"
-      },
-      {
-         "sno": 4,
-         "business_name": "spa",
-         "contact": "9864552000",
-         "add": "kovilpatti"
       }
    ]
 }
